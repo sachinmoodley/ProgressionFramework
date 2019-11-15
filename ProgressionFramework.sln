@@ -5,7 +5,9 @@ VisualStudioVersion = 16.0.29411.108
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ProgressionFramework", "ProgressionFramework\ProgressionFramework.csproj", "{7DD72243-7E43-42A7-889E-6B49AA0C8F51}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InheritanceAndPolymorphism", "InheritanceAndPolymorphism\InheritanceAndPolymorphism.csproj", "{4F382314-3551-4F15-9F9F-ACC10240E8DC}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "InheritanceAndPolymorphism", "InheritanceAndPolymorphism\InheritanceAndPolymorphism.csproj", "{4F382314-3551-4F15-9F9F-ACC10240E8DC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Interfaces", "Interfaces\Interfaces.csproj", "{3818906A-3355-49A4-8D2B-C6F356279B29}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +23,10 @@ Global
 		{4F382314-3551-4F15-9F9F-ACC10240E8DC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4F382314-3551-4F15-9F9F-ACC10240E8DC}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4F382314-3551-4F15-9F9F-ACC10240E8DC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3818906A-3355-49A4-8D2B-C6F356279B29}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3818906A-3355-49A4-8D2B-C6F356279B29}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3818906A-3355-49A4-8D2B-C6F356279B29}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3818906A-3355-49A4-8D2B-C6F356279B29}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
