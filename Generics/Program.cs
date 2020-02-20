@@ -18,10 +18,15 @@ namespace Generics
         public string Surname { get; set; }
     }
 
+    public delegate void cakeFace(string name);
+
     public class Program
     {
+        //todo make a funtion to limit what t is and show 2 T params
         public static void Main(string[] args)
         {
+
+
             //basic list
             var basicList = new List<string>();
             basicList.Add("I am a basic list");
@@ -48,11 +53,18 @@ namespace Generics
             GenericMethod(true);
             var person = new Person { Name = "Bobby", Surname = "Brown" };
             GenericMethod($"{person.Name} {person.Surname}");
+
+            Method(Console.WriteLine);
         }
 
         private static void GenericMethod<T>(T input)
         {
             Console.WriteLine(input);
+        }
+
+        private static void Method(cakeFace input)
+        {
+            input("HBFHS");
         }
     }
 }
