@@ -26,9 +26,14 @@ namespace InheritanceAndPolymorphism
 
             //Animal App to show polymorphism
             var dog = new Dog { Name = "Dog" };
-            dog.AnimalSound();
+            MakeSound(dog);
             var cat = new Cat { Name = "Cat" };
-            cat.AnimalSound();
+            MakeSound(cat);
+        }
+
+        static void MakeSound(Animal animal)
+        {
+            animal.AnimalSound();
         }
     }
 }
