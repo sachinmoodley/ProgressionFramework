@@ -10,19 +10,17 @@ namespace InheritanceAndPolymorphism
 
         /*My comments
          -Created a class to log data
-         -Created a new app Animal sounds to demo why i would use polymorphism   
+         -Created a new app Animal sounds to demo why i would use polymorphism 
+         -changed betting app to rather call Parent class and pass it a child class to demo polymorphism
         */
         static void Main(string[] args)
         {
             //Betting App
-            //basic inheritance example
             var horseRacingBet = new HorseRacingBet { BetType = "Pick 6", MinimumBet = 4, RaceNo = "Race 1", BetDescription = "Horse Racing" };
-            horseRacingBet.GetBetInformation();
+            BetDetails(horseRacingBet);
 
-            //polymorphism example
-            //Overriding the GetBet Info 
             var lottoBet = new LottoBet { BetType = "Powerball", MinimumBet = 6, Pool = 1100000, BetDescription = "Lotto" };
-            lottoBet.GetBetInformation();
+            BetDetails(lottoBet);
 
             //Animal App to show polymorphism
             var dog = new Dog { Name = "Dog" };
@@ -31,9 +29,14 @@ namespace InheritanceAndPolymorphism
             MakeSound(cat);
         }
 
-        static void MakeSound(Animal animal)
+        private static void MakeSound(Animal animal)
         {
             animal.AnimalSound();
+        }
+
+        private static void BetDetails(Bet bet)
+        {
+            bet.GetBetInformation();
         }
     }
 }

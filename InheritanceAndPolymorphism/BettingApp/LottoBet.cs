@@ -6,11 +6,12 @@ namespace InheritanceAndPolymorphism.BettingApp
     {
         public int Pool { get; set; }
         public override string GetBet() => $"Minimum bet for {BetType} is R{MinimumBet} for a massive pool of R{Pool}";
-        public void GetBetInformation()
+        public override void GetBetInformation()
         {
             Console.WriteLine("Bet Description: " + BetDescription);
             Console.WriteLine("Pool: " + Pool);
             Console.WriteLine(GetBet());
+            Console.WriteLine("   ");
         }
     }
 }
