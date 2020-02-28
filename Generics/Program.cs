@@ -4,29 +4,15 @@ using System.Linq;
 
 namespace Generics
 {
-    public class GenericClass<T>
-    {
-        public void GenericMethod<T>(T input)
-        {
-            Console.WriteLine(input);
-        }
-    }
-
-    public class Person
-    {
-        public string Name { get; set; }
-        public string Surname { get; set; }
-    }
-
-    public delegate void cakeFace(string name);
-
     public class Program
     {
+        //Brendons comments
         //todo make a funtion to limit what t is and show 2 T params
+
+        //My comments
+        //created a funtion to limit what t is and show 2 T params
         public static void Main(string[] args)
         {
-
-
             //basic list
             var basicList = new List<string>();
             basicList.Add("I am a basic list");
@@ -40,12 +26,13 @@ namespace Generics
             foreach (var field in simpleDictionary)
             {
                 Console.WriteLine(field);
-
             }
 
             //generic class and method
             var genericInt = new GenericClass<int>();
             genericInt.GenericMethod(12345);
+            var genericString = new GenericClass<string>();
+            genericString.GenericMethod("test");
 
             //Generic method
             GenericMethod(40);
@@ -54,7 +41,9 @@ namespace Generics
             var person = new Person { Name = "Bobby", Surname = "Brown" };
             GenericMethod($"{person.Name} {person.Surname}");
 
-            Method(Console.WriteLine);
+            //Generics with type constraints 
+            var animal = new Animal { AnimalType = "Lion" };
+            ShowGenericsWithTypeConstraints(person, animal);
         }
 
         private static void GenericMethod<T>(T input)
@@ -62,9 +51,10 @@ namespace Generics
             Console.WriteLine(input);
         }
 
-        private static void Method(cakeFace input)
+        private static void ShowGenericsWithTypeConstraints<T, U>(T person, U animal) where T : Person where U : Animal
         {
-            input("HBFHS");
+            Console.WriteLine($"This persons name is {person.Name}");
+            Console.WriteLine($"This animal is a {animal.AnimalType}");
         }
     }
 }

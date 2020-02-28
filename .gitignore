@@ -1,3 +1,9 @@
 .vs/
 **/bin
 **/obj
+*.dll
+*.obj
+/Generics/bin/Debug/netcoreapp3.0/Generics.dll
+/Generics/obj/Debug/netcoreapp3.0/Generics.csproj.FileListAbsolute.txt
+/Generics/obj/Debug/netcoreapp3.0/Generics.exe
+/Generics/obj/Debug/netcoreapp3.0/Generics.pdb
