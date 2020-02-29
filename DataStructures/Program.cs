@@ -1,5 +1,5 @@
 ﻿using DataStructures.QueueApp;
-using System;
+using DataStructures.StackApp;
 
 namespace DataStructures
 {
@@ -7,10 +7,17 @@ namespace DataStructures
     {
         public static void Main(string[] args)
         {
+            //Queue
             var licensingOffice = new LicensingOffice();
             var customersEntered = licensingOffice.EnterCustomersInQueue();
 
             licensingOffice.CustomersExitingTheQueue(customersEntered);
+
+            //Stack
+            var shippingLine = new ShippingLine();
+            var containersStored = shippingLine.EnterShippingContainersToStore();
+
+            shippingLine.PullOutShippingContainers(containersStored);
         }
     }
 }
