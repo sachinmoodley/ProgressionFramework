@@ -9,7 +9,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "InheritanceAndPolymorphism"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Interfaces", "Interfaces\Interfaces.csproj", "{3818906A-3355-49A4-8D2B-C6F356279B29}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Generics", "Generics\Generics.csproj", "{11DC02C5-437D-446A-BBA9-02256F5DB996}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Generics", "Generics\Generics.csproj", "{11DC02C5-437D-446A-BBA9-02256F5DB996}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataStructures", "DataStructures\DataStructures.csproj", "{BE02522C-5123-4B44-BACC-BF73F5AE5508}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +35,10 @@ Global
 		{11DC02C5-437D-446A-BBA9-02256F5DB996}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{11DC02C5-437D-446A-BBA9-02256F5DB996}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{11DC02C5-437D-446A-BBA9-02256F5DB996}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BE02522C-5123-4B44-BACC-BF73F5AE5508}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BE02522C-5123-4B44-BACC-BF73F5AE5508}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BE02522C-5123-4B44-BACC-BF73F5AE5508}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BE02522C-5123-4B44-BACC-BF73F5AE5508}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
