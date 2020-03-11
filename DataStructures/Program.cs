@@ -1,4 +1,5 @@
-﻿using DataStructures.QueueApp;
+﻿using DataStructures.LinkedListApp;
+using DataStructures.QueueApp;
 using DataStructures.StackApp;
 
 namespace DataStructures
@@ -18,6 +19,11 @@ namespace DataStructures
             var containersStored = shippingLine.EnterShippingContainersToStore();
 
             shippingLine.PullOutShippingContainers(containersStored);
+
+            //Linked List
+            var people = new CompetitionList();
+            people.AddPersonToCompetition();
+
         }
     }
 }
