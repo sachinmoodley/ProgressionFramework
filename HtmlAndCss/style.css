@@ -1,3 +1,71 @@
 body {
-    background-color: #3f4a5c;
+    background: linear-gradient(to right, white , grey);
   }
+
+  table, th, td {
+    border: 1px solid black;
+    border-collapse: collapse;
+    box-shadow: 2px 2px 0 0 rgba(6, 72, 72, 1);
+  }
+  th, td {
+    padding: 5px;
+    text-align: left;    
+  }
+
+  .align-text-ceneter {
+    text-align: center;
+  }
+
+  .primary-header {
+    font-size: 20px;
+  }
+
+  div {
+    width: 115px;
+    height: 50px;
+    background-color: White;
+    font-weight: bold;
+    position: relative;
+    animation: mymove 10s infinite;
+    animation-timing-function: ease-in;
+  }
+
+  @keyframes mymove {
+    from {left: 0px;}
+    to {left: 82%;}
+  }
+
+  .pointer {
+    width: 200px;
+    height: 40px;
+    position: relative;
+    background: red;
+  }
+  .pointer:after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0;
+    height: 0;
+    border-left: 20px solid white;
+    border-top: 20px solid transparent;
+    border-bottom: 20px solid transparent;
+  }
+  .pointer:before {
+    content: "";
+    position: absolute;
+    right: -20px;
+    bottom: 0;
+    width: 0;
+    height: 0;
+    border-left: 20px solid red;
+    border-top: 20px solid transparent;
+    border-bottom: 20px solid transparent;
+  }
+
+.animation-span {
+  float: right;
+  color: white;
+  margin-top: 10px;
+}
