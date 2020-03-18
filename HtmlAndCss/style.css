@@ -1,5 +1,5 @@
 body {
-    background: linear-gradient(to right, white , grey);
+    background: linear-gradient(to right, white , lightblue);
   }
 
   table, th, td {
@@ -39,7 +39,7 @@ body {
     width: 200px;
     height: 40px;
     position: relative;
-    background: red;
+    background: black;
   }
   .pointer:after {
     content: "";
@@ -59,13 +59,33 @@ body {
     bottom: 0;
     width: 0;
     height: 0;
-    border-left: 20px solid red;
+    border-left: 20px solid black;
     border-top: 20px solid transparent;
     border-bottom: 20px solid transparent;
   }
 
 .animation-span {
   float: right;
-  color: white;
+  color: #4CAF50;
   margin-top: 10px;
+}
+
+#skills li{
+  display: table-cell; 
+  width: 125px;
+  height: 125px;
+  border: 1px solid #000;   
+  text-align: center;
+  margin: 2px;
+  background-color: black;
+  font-size: 20px;
+  vertical-align:middle;
+  color: #4CAF50;
+  font-family:Arial,sans-serif;
+  font-weight:bold;
+  border:1px solid #854;
+}
+
+ol {
+  padding-inline-start: 0px !important;
 }
