@@ -1,23 +1,18 @@
-﻿using System;
-using static Delegates.Geeks;
+﻿using static Delegates.BasicCalculate;
 
 namespace Delegates
 {
-
-    //example taken from https://www.geeksforgeeks.org/c-sharp-delegates/
-    class Program
+    public class Program
     {
         static void Main(string[] args)
         {
-            var obj = new Geeks();
+            var basicCalculate = new BasicCalculate();
 
-            addnum del_obj1 = new addnum(obj.sum);
-            subnum del_obj2 = new subnum(obj.subtract);
+            var addition = new calculate(basicCalculate.Add);
+            var subtraction = new calculate(basicCalculate.Subtract);
 
-            del_obj1(100, 40);
-            del_obj2(100, 60);
-
-            //Console.WriteLine(del_obj1.Invoke(100, 40));
+            addition(100, 40);
+            subtraction(100, 40);
         }
     }
 }
