@@ -1,20 +1,40 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Linq;
 
 namespace Delegates
 {
     public class BasicCalculate
     {
         public delegate void calculate(int firstNumber, int secondNumber);
+        public delegate void log(string message);
 
-        public void Add(int firstNumber, int secondNumber)
+        public void Add(calculate calculate)
         {
-            Console.WriteLine($"Addition Method : {firstNumber + secondNumber}");
+            calculate(100, 30);
         }
 
         public void Subtract(int firstNumber, int secondNumber)
         {
             Console.WriteLine($"Subtraction Method: {firstNumber - secondNumber}");
         }
+
+        public void doSomeWork(log log)
+        {
+            log("Success");
+        }
+
+        //public calculate Cake()
+        //{
+        //    var x = new List<int>();
+        //    x.Select(Moo);
+        //    return Add;
+        //}
+
+        //public string Moo(int x)
+        //{
+        //    return x.ToString();
+        //}
 
         //public delegate void InterestCalculationDelegate(int[] num);
 

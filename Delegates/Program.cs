@@ -1,4 +1,5 @@
-﻿using static Delegates.BasicCalculate;
+﻿using System;
+using static Delegates.BasicCalculate;
 
 namespace Delegates
 {
@@ -13,6 +14,9 @@ namespace Delegates
 
             addition(100, 40);
             subtraction(100, 40);
+
+
+            basicCalculate.doSomeWork((message => Console.WriteLine(message)));
         }
     }
 }

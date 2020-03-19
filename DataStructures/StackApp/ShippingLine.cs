@@ -14,7 +14,7 @@ namespace DataStructures.StackApp
             var stackLimit = 5;
             for (int x = 0; x < stackLimit; x++)
             {
-                Console.WriteLine("Please container number?");
+                Console.WriteLine("Please enter container number?");
                 containerNumber = Console.ReadLine();
                 containers.Push(containerNumber);
             }
