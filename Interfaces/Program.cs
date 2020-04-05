@@ -1,6 +1,6 @@
 ﻿using System;
 using Interfaces.CarApp;
-using Interfaces.DogApp;
+using Interfaces.LifeApp;
 
 namespace Interfaces
 {
@@ -10,6 +10,8 @@ namespace Interfaces
         //make a diff car an another function to print both cars that uses ICar
         //write eg of explicitly implementing an interface
         //https://www.geeksforgeeks.org/c-sharp-explicit-interface-implementation/
+        //depending an interface, create a method to print the car.the method should depend on the uinterface instead of the concrete
+
 
         //My comments
         //Created another car and added function to print 

@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Interfaces.DogApp
+namespace Interfaces.LifeApp
 {
     public class Life : IAnimal, IHuman
     {

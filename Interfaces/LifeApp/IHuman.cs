@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace Interfaces.DogApp
+﻿namespace Interfaces.LifeApp
 {
     public interface IHuman
     {

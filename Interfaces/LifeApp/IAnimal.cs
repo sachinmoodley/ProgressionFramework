@@ -1,4 +1,4 @@
-﻿namespace Interfaces.DogApp
+﻿namespace Interfaces.LifeApp
 {
     public interface IAnimal
     {
