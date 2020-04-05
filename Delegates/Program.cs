@@ -1,5 +1,4 @@
 ﻿using System;
-using static Delegates.BasicCalculate;
 
 namespace Delegates
 {
@@ -8,15 +7,10 @@ namespace Delegates
         static void Main(string[] args)
         {
             var basicCalculate = new BasicCalculate();
+            //basicCalculate.doSomeWork(message => Console.WriteLine(message));
 
-            var addition = new calculate(basicCalculate.Add);
-            var subtraction = new calculate(basicCalculate.Subtract);
-
-            addition(100, 40);
-            subtraction(100, 40);
-
-
-            basicCalculate.doSomeWork((message => Console.WriteLine(message)));
+            basicCalculate.Add((number1, number2) => Console.WriteLine(number1 + number2));
+            basicCalculate.Subtract((number1, number2) => Console.WriteLine(number1 - number2));
         }
     }
 }
