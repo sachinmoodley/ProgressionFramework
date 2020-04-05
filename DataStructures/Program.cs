@@ -14,12 +14,8 @@ namespace DataStructures
             //Stack
             ShippingLine.Start();
 
-            //shippingLine.PullOutShippingContainers(containersStored);
-
             ////Linked List
-            //var people = new CompetitionList();
-            //people.AddPersonToCompetition();
-
+            CompetitionList.Start();
         }
     }
 }

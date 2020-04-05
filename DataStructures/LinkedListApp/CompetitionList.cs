@@ -1,49 +1,112 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
+/*
+ * Have some default values in the list
+ * Have an Add method that checks the linked list score and adds item where node is greater than previous node and less than next node
+ * Delete a node given the persons name
+ * Display all values in linked list
+ */
 
 namespace DataStructures.LinkedListApp
 {
+    /*
+     Brendons Feedback
+     * linked list do displaying person
+     * do it with a while loop without a index
+     * add score class that has name and score.. 
+     * while loop will fix issue i had
+     */
     public class CompetitionList
     {
-        public void AddPersonToCompetition()
+        public static void Start()
         {
-            var personList = new LinkedList<string>();
-            personList.AddLast("Tom");
-            personList.AddLast("Banks");
-            DisplayPersonList(personList);
+            var competitionList = new LinkedList<Competition>();
+            competitionList.AddLast(new Competition { Name = "Tom", Score = 55 });
+            competitionList.AddLast(new Competition { Name = "Banks", Score = 60 });
 
-            string userAnswer = null;
-            while (userAnswer != "Exit")
+            string userInput = null;
+            while (userInput != "Exit")
             {
-                Console.WriteLine("Please enter 'add' to add a new person to list or 'remove' to delete a person or 'Exit to stop program'");
-                userAnswer = Console.ReadLine();
+                Console.WriteLine("Please enter 'add' to add a person to the competition, 'delete' to remove a person or 'Exit to stop program'");
+                userInput = Console.ReadLine();
 
-                if (userAnswer.ToLower() == "add")
+                if (userInput == "add")
                 {
-                    Console.WriteLine("Please eneter persons name");
-                    var newPerson = Console.ReadLine();
-                    personList.AddLast(newPerson);
-                    Console.WriteLine("Person successfully added");
-                    DisplayPersonList(personList);
+                    AddPersonToCompetition(competitionList);
+                }
+                else if (userInput == "delete")
+                {
+                    RemovePersonFromCompetition(competitionList);
+                }
+                else
+                {
+                    Console.WriteLine("Please enter a valid input");
                 }
 
-                if (userAnswer.ToLower() == "delete")
+                DisplayPersonList(competitionList);
+
+            }
+        }
+
+        private static void RemovePersonFromCompetition(LinkedList<Competition> competitionList)
+        {
+            DisplayPersonList(competitionList);
+            Console.WriteLine("Enter persons name to delete");
+            var personToDelete = Console.ReadLine();
+            var currentNode = competitionList.First;
+            while (currentNode != null)
+            {
+                if (currentNode.Value.Name == personToDelete)
                 {
-                    Console.WriteLine("Eneter persons name to delete");
-                    var personToDelete = Console.ReadLine();
-                    personList.Remove(personToDelete);
+                    var toRemove = currentNode;
+                    competitionList.Remove(toRemove);
                     Console.WriteLine("Person successfully deleted");
-                    DisplayPersonList(personList);
+                    break;
                 }
             }
         }
 
-        private static void DisplayPersonList(LinkedList<string> personList)
+        private static void AddPersonToCompetition(LinkedList<Competition> competitionList)
+        {
+            Console.WriteLine("Please enter person name");
+            var personName = Console.ReadLine();
+            Console.WriteLine("Please enter person score");
+            var personScore = Convert.ToInt32(Console.ReadLine());
+
+            if (personScore <= competitionList.First().Score)
+            {
+                competitionList.AddFirst(new Competition { Name = personName, Score = personScore });
+                Console.WriteLine("Person successfully added");
+            }
+            else if (personScore >= competitionList.Last.Value.Score)
+            {
+                competitionList.AddLast(new Competition { Name = personName, Score = personScore });
+                Console.WriteLine("Person successfully added");
+            }
+            else
+            {
+                var currentNode = competitionList.First;
+                while (currentNode != null)
+                {
+
+                    if (personScore >= currentNode.Value.Score && personScore <= currentNode.Next.Value.Score)
+                    {
+                        competitionList.AddAfter(currentNode, new Competition { Name = personName, Score = personScore });
+                        Console.WriteLine("Person successfully added");
+                        break;
+                    }
+                    currentNode = currentNode.Next;
+                }
+            }
+        }
+
+        private static void DisplayPersonList(LinkedList<Competition> personList)
         {
             Console.WriteLine("People in list: " + personList.Count);
-            foreach (string person in personList)
+            foreach (var person in personList)
             {
-                Console.WriteLine("Person Name: " + person);
+                Console.WriteLine($"Person Name: {person.Name}, Person Score: {person.Score}");
             }
         }
     }
