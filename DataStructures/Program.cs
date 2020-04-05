@@ -9,20 +9,16 @@ namespace DataStructures
         public static void Main(string[] args)
         {
             //Queue
-            var licensingOffice = new LicensingOffice();
-            var customersEntered = licensingOffice.EnterCustomersInQueue();
-
-            licensingOffice.CustomersExitingTheQueue(customersEntered);
+            LicensingOffice.Start();
 
             //Stack
-            var shippingLine = new ShippingLine();
-            var containersStored = shippingLine.EnterShippingContainersToStore();
+            ShippingLine.Start();
 
-            shippingLine.PullOutShippingContainers(containersStored);
+            //shippingLine.PullOutShippingContainers(containersStored);
 
-            //Linked List
-            var people = new CompetitionList();
-            people.AddPersonToCompetition();
+            ////Linked List
+            //var people = new CompetitionList();
+            //people.AddPersonToCompetition();
 
         }
     }
