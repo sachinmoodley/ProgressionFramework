@@ -9,8 +9,8 @@ namespace Delegates
             var basicCalculate = new BasicCalculate();
             //basicCalculate.doSomeWork(message => Console.WriteLine(message));
 
-            basicCalculate.Add((number1, number2) => Console.WriteLine(number1 + number2));
-            basicCalculate.Subtract((number1, number2) => Console.WriteLine(number1 - number2));
+            basicCalculate.Add(20, 10, message => Console.WriteLine(message));
+            basicCalculate.Subtract(20, 10, message => Console.WriteLine(message));
         }
     }
 }

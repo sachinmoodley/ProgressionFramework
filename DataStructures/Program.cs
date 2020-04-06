@@ -14,7 +14,7 @@ namespace DataStructures
             //Stack
             ShippingLine.Start();
 
-            ////Linked List
+            //Linked List
             CompetitionList.Start();
         }
     }

@@ -1,8 +1,10 @@
 ﻿namespace Delegates
 {
+    //do a simple calculate 
+    //remove calc delegate
+    //use log as your delegate
     public class BasicCalculate
     {
-        public delegate void calculate(int firstNumber, int secondNumber);
         public delegate void log(string message);
 
         public void doSomeWork(log log)
@@ -10,14 +12,16 @@
             log("Success");
         }
 
-        public void Add(calculate calculate)
+        public void Add(int firstNumber, int secondNumber, log log)
         {
-            calculate(10, 20);
+            var sum = firstNumber + secondNumber;
+            log($"Your total is {sum}");
         }
 
-        public void Subtract(calculate calculate)
+        public void Subtract(int firstNumber, int secondNumber, log log)
         {
-            calculate(20, 10);
+            var sum = firstNumber - secondNumber;
+            log($"Your total is {sum}");
         }
     }
 }

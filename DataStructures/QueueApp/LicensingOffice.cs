@@ -1,17 +1,17 @@
 ﻿using System;
 using System.Collections;
+using System.Collections.Generic;
 
 namespace DataStructures.QueueApp
 {
     /*Bredons feedback
-    Use a while loop
-    For each time ask if joining or leave and then do action
+    Instead of peek should use dequeue and store in variable to log
     */
     public class LicensingOffice
     {
         public static void Start()
         {
-            var customerQueue = new Queue();
+            var customerQueue = new Queue<string>();
             StartQueue(customerQueue);
 
             while (customerQueue.Count != 0)
@@ -28,8 +28,8 @@ namespace DataStructures.QueueApp
                         break;
                     }
                     case "E":
-                        Console.WriteLine(customerQueue.Peek() + "is leaving the queue");
-                        customerQueue.Dequeue();
+                        var customerExiting = customerQueue.Dequeue();
+                        Console.WriteLine($"{customerExiting} is leaving the queue");
                         break;
                     default:
                         Console.WriteLine("Oops you have not entered a valid input");
@@ -45,7 +45,7 @@ namespace DataStructures.QueueApp
             Console.WriteLine("Congratulations !!! Your queue is now empty");
         }
 
-        private static void StartQueue(Queue customerQueue)
+        private static void StartQueue(Queue<string> customerQueue)
         {
             if (customerQueue.Count == 0)
             {

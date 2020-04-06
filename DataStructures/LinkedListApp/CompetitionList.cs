@@ -10,13 +10,6 @@ using System.Linq;
 
 namespace DataStructures.LinkedListApp
 {
-    /*
-     Brendons Feedback
-     * linked list do displaying person
-     * do it with a while loop without a index
-     * add score class that has name and score.. 
-     * while loop will fix issue i had
-     */
     public class CompetitionList
     {
         public static void Start()
@@ -101,12 +94,14 @@ namespace DataStructures.LinkedListApp
             }
         }
 
-        private static void DisplayPersonList(LinkedList<Competition> personList)
+        private static void DisplayPersonList(LinkedList<Competition> competitionList)
         {
-            Console.WriteLine("People in list: " + personList.Count);
-            foreach (var person in personList)
+            Console.WriteLine("People in list: " + competitionList.Count);
+            var currentNode = competitionList.First;
+            while (currentNode != null)
             {
-                Console.WriteLine($"Person Name: {person.Name}, Person Score: {person.Score}");
+                Console.WriteLine($"Person Name: {currentNode.Value.Name}, Person Score: {currentNode.Value.Score}");
+                currentNode = currentNode.Next;
             }
         }
     }
