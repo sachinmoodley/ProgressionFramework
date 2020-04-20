@@ -7,8 +7,8 @@ namespace Delegates
         static void Main(string[] args)
         {
             var basicCalculate = new BasicCalculate();
-            //basicCalculate.doSomeWork(message => Console.WriteLine(message));
 
+            //Delegate for logging
             basicCalculate.Add(20, 10, message => Console.WriteLine(message));
             basicCalculate.Subtract(20, 10, message => Console.WriteLine(message));
         }

@@ -3,25 +3,27 @@
     //do a simple calculate 
     //remove calc delegate
     //use log as your delegate
+
+    // create a class with a method to take in 10 lines of numbers.. that class should have a constructor as a delegate.
+    // the delegate should have a behaviour to sort the numbers
+    //then return the numbers
     public class BasicCalculate
     {
         public delegate void log(string message);
 
-        public void doSomeWork(log log)
-        {
-            log("Success");
-        }
 
-        public void Add(int firstNumber, int secondNumber, log log)
+        public int Add(int firstNumber, int secondNumber, log log)
         {
             var sum = firstNumber + secondNumber;
             log($"Your total is {sum}");
+            return sum;
         }
 
-        public void Subtract(int firstNumber, int secondNumber, log log)
+        public int Subtract(int firstNumber, int secondNumber, log log)
         {
             var sum = firstNumber - secondNumber;
             log($"Your total is {sum}");
+            return sum;
         }
     }
 }
